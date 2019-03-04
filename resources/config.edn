@@ -1,0 +1,28 @@
+{:db         {:auto-commit        true
+              :read-only          false
+              :connection-timeout 30000
+              :validation-timeout 5000
+              :idle-timeout       600000
+              :max-lifetime       1800000
+              :minimum-idle       10
+              :maximum-pool-size  10
+              :pool-name          "db-pool"
+              :adapter            "postgresql"
+              :username           "srihari"
+              :password           ""
+              :database-name      "test_webapp_db"
+              :server-name        "localhost"
+              :port-number        5432
+              :register-mbeans    false}
+
+ :migrations {:store                :database
+              :migration-dir        "migrations/"
+              :init-script          "init.sql"
+              :migration-table-name "schema_migrations"
+              :db                   #ref [:db]}
+
+ :server     {:port 3000 :join? false}
+
+ :log        {:level    :info
+
+              :filename "log/webapp.log"}}

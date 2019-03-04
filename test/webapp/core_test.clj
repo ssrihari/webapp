@@ -1,6 +1,6 @@
 (ns webapp.core-test
   (:require [clojure.test :refer :all]
-            [webapp.core :refer :all]))
+            [webapp.server :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
